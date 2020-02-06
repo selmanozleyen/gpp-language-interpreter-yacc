@@ -79,9 +79,9 @@ input:
       ;
 
 listval:
-       OP_C OP_OP values OP_CP {$$ = $3;}
+       OP_Q OP_OP values OP_CP {$$ = $3;}
       | OP_OP KW_LIST values OP_CP {$$ = $3;}
-      | OP_C OP_OP OP_CP {$$ = NULL;}
+      | OP_Q OP_OP OP_CP {$$ = NULL;}
       | KW_NIL {$$ = NULL;}
       ;
 values:
