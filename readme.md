@@ -12,7 +12,7 @@ G++ is a language my professor of Programing Languages course created for educat
 #### Terminal Symbols
 * **Keywords**: and, or, not, equal, less, nil, list, append, concat, set, for, if, exit, load, disp, true, false, while, defvar.
 * **Operators**: *+*, *-*, */*, *\**, *(*, *)*, *\*\**
-* **Coments**: starts with ;;
+* **Comments**: starts with ;;
 * **Value**: Any combination of digits with no leading zeros. 0 is
 considered a value.
 * **Identifier**: Any combination of alphabetical characters and digits
@@ -22,14 +22,14 @@ with no leading digit.
 __Lexer will parse the code into these tokens first:__ _COMMENT, KW_AND, KW_OR, KW_NOT, KW_EQUAL, KW_LESS, KW_NIL, KW_LIST, KW_APPEND, KW_CONCAT, KW_SET, KW_FOR, KW_IF, KW_EXIT, KW_LOAD, KW_DISP, KW_TRUE, KW_FALSE, KW_WHILE, KW_DEFVAR, OP_PLUS, OP_MINUS, OP_DIV, OP_MULT, OP_OP, OP_CP, OP_DBLMULT, OP_COMMA, STRING, OP_Q, IDENTIFIER, VALUE_.
 
 ### Concrete Syntax:
-Here are the Backus-Naur form (BNF) rules. Notice that terminal symbols are all uppercase and non terminals are not.
+Here are the Backus-Naur form (BNF) rules. Notice that terminal symbols are all uppercase and non terminals are not. Below all the non-token symbols are also defined as non-terminal symbols.
 * start -> start input | input.
 * input -> expi | explisti | expb | COMMENT.
-* listval -> OP_Q OP_OP values OP_CP | OP_OP KW_LIST values OP_CP | OP_Q OP_OP OP_CP | KW_NIL.
+* listval -> _OP_Q_ OP_OP values OP_CP | OP_OP KW_LIST values OP_CP | _OP_Q_ OP_OP OP_CP | KW_NIL.
 * values -> values VALUE | VALUE.
 * start -> start input | input.
 * input -> expi | explisti | expb | COMMENT.
-* listval -> OP_Q _OP_OP_ values _OP_CP_ | _OP_OP_ KW_LIST values _OP_CP_ | OP_Q _OP_OP_ _OP_CP_ | KW_NIL.
+* listval -> _OP_Q_ _OP_OP_ values _OP_CP_ | _OP_OP_ KW_LIST values _OP_CP_ | _OP_Q_ _OP_OP_ _OP_CP_ | KW_NIL.
 * values -> values _VALUE_ | _VALUE_.
 * expi -> _VALUE_ |\
         &emsp; &emsp; _IDENTIFIER_ |\
