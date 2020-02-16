@@ -23,6 +23,7 @@
 "append" {return KW_APPEND;} 
 "concat" {return KW_CONCAT;} 
 "set" {return KW_SET;} 
+"deffun" {return KW_DEFFUN;}
 "for" {return KW_FOR;}
 "if" {return KW_IF;}
 "exit" {return KW_EXIT;}
@@ -43,7 +44,8 @@
 "**" {return OP_DBLMULT;} 
 "," {return OP_COMMA;}
 \"*\" {return STRING;}
-"\"" {return OP_Q}
+"'" {return OP_Q;}
+
 
 
 [0][0-9]+ {printf("%s Could Not Be Tokenized\n",yytext);}

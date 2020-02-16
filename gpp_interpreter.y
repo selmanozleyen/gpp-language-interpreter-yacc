@@ -51,7 +51,7 @@
 %token OP_CP 
 %token OP_DBLMULT
 %token OP_COMMA 
-%token OP_C
+%token OP_Q
 %token KW_WHILE
 %token KW_DEFVAR
 %token STRING

@@ -1,6 +1,6 @@
 # G++ Interpreter
 ## Introduction
-G++ is a language my professor of Programing Languages course created for educational purposes. This project is an interpreter written for this language with yacc/bison. The properties of the language will be given below as well as some instructions for running the project.
+G++ is a language my professor of Programing Languages course created for educational purposes. This project is an interpreter written for this language with yacc/bison. The properties of the language will be given below as well as some instructions for running the project. With this language you can set variables, change them, do math expressions and create loops.
 ## Properties Of The G++ Language
 ### General Properties
 * Lisp-like syntax
@@ -62,6 +62,16 @@ Here are the Backus-Naur form (BNF) rules. Notice that terminal symbols are all 
     &emsp; &emsp; _KW_FALSE_.
 * explisti -> _OP_OP_ _KW_CONCAT_ explisti explisti _OP_CP_ | _OP_OP_ _KW_APPEND_ expi explisti _OP_CP_ | listval.
 
-
-
-
+## How To Compile and Run
+To compile
+```
+flex gpp_lexer.l
+yacc -d gpp_interpreter.y
+cc lex.yy.c y.tab.c
+```
+To run
+```
+./a.out
+```
+## Screenshots
+![ScreenShot](/screenshots/1.png)
