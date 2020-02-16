@@ -74,4 +74,4 @@ To run
 ./a.out
 ```
 ## Screenshots
-![ScreenShot](/screenshots/1.png)
+![ScreenShot](/screenshots/1.PNG)
